@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>skafold test</title>
+</head>
+
+<body>
+  <script src="../src/skafold.js"></script>
+  <script>
+    var app = skafold.bind(document.body)
+    app.apply(
+      div({
+        id: "app",
+        class: "bg-blue",
+        js: "yes"
+      }, h1([
+        txt("Skafold the app")
+      ]), p({
+        css: "text-align: center;"
+      }, text(
+        'Welcome to the '+
+        span({
+          style: "color: aqua;"
+        }, 'Skafold')+
+        ' web app.'+
+        br()+
+        'hope you have fun!'
+        )
+        )
+        )
+    )
+  </script>
+</body>
+
+</html>
