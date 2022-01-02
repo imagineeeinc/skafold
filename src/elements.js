@@ -202,6 +202,24 @@ exports.define = (...op) => {
 	opts.ele = ele
 	return build(opts).outerHTML
 }
+exports.customEle = (...op) => {
+	let ele = op.shift()
+	let opts = seprate(op)
+	opts.ele = ele
+	return build(opts).outerHTML
+}
+exports.custEle = (...op) => {
+	let ele = op.shift()
+	let opts = seprate(op)
+	opts.ele = ele
+	return build(opts).outerHTML
+}
+exports.newEle = (...op) => {
+	let ele = op.shift()
+	let opts = seprate(op)
+	opts.ele = ele
+	return build(opts).outerHTML
+}
 exports.script = (...op) => {
 	let opts = seprate(op)
 	opts.ele = "script"
