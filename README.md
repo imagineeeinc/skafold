@@ -1,8 +1,8 @@
-# Skafold
+<h1 align="center">Skafold</h1>
+<h4 align="center">A small html scaffolding library, to build beautiful UI in JavaScript</h4>
+Skafold (speled as the regular Scafold) is meant ot be a unique js libary to build websites by scafolding up using modular bricks. Its quite simple as just calling a few functions in your code to build a nice dom.
 
-A small html scaffolding libary, to build beautiful ui in js.
-
-# List of available elements
+### List of available elements
 
 * [X] div
 * [X] txt
