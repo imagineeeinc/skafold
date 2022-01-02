@@ -1,7 +1,49 @@
 <h1 align="center">Skafold</h1>
 <h4 align="center">A small html scaffolding library, to build beautiful UI in JavaScript</h4>
-Skafold (speled as the regular Scafold) is meant ot be a unique js libary to build websites by scafolding up using modular bricks. Its quite simple as just calling a few functions in your code to build a nice dom.
+Skafold (speled as the regular Scafold) is meant ot be a unique js libary to build websites by scafolding up using modular bricks. Its quite simple as just calling a few functions in your code to build a nice dom. There are helper functions inplace to also apply changes to the actual dom.
 
+## Example
+```js
+div({
+  id: "app",
+  class: "bg-blue",
+  js: "yes"
+},
+  h1(
+    txt("Skafold the app")
+  ),
+  p({
+    css: "text-align: center;"
+  },
+    text(
+      'Welcome to the '+
+      span({
+        style: "color: aqua;"
+      }, 'Skafold')+
+      ' web app.'+
+      br()+
+      'hope you have fun!'
+    )
+  )
+)
+```
+This converts to:
+```html
+<div id="app" class="bg-blue" js="yes">
+  <h1>Skafold the app</h1>
+  <p style="text-align: center;">
+    Welcome to the <span style="color: aqua;">Skafold</span> web app.<br>hope you have fun!
+  </p>
+</div>
+```
+It's as simple as defining functions.
+
+## Install
+Simple as importing this in your html:
+```
+# production
+https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js
+```
 ### List of available elements
 
 * [X] div
@@ -63,6 +105,6 @@ Skafold (speled as the regular Scafold) is meant ot be a unique js libary to bui
 * [X] css or style
 * [X] script
 
-# custom attributes
+#### custom attributes
 
 - css
