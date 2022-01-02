@@ -1,0 +1,33 @@
+{
+  "name": "skafold",
+  "version": "0.1.0",
+  "description": "A small html scaffolding libary, to build beautiful ui in js",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "node bundle.js",
+    "watch": "nodemon bundle.js -i ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imagineeeinc/skafold.git"
+  },
+  "keywords": [
+    "ui-framework",
+    "ui",
+    "html",
+    "css",
+    "skafold",
+    "scafolding",
+    "scafold",
+    "imagineee"
+  ],
+  "author": "imagineeeinc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imagineeeinc/skafold/issues"
+  },
+  "homepage": "https://github.com/imagineeeinc/skafold#readme",
+  "devDependencies": {
+    "esbuild": "^0.14.10"
+  }
+}

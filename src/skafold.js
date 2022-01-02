@@ -5,35 +5,57 @@
 }(this, (function (exports) { 'use strict';
   exports.skafold = {
     bind: (ele) => {
-      return new class {
+      return new (class {
         constructor(ele) {
           this.bindElement = ele
         }
-        apply(html) {
-          this.bindElement.innerHTML = html
+        apply(...html) {
+          html.forEach(element => {
+            this.bindElement.innerHTML += element
+          })
         }
-      }
+      })(ele)
     }
   }
-  
-  // The elements
-  exports.div = (...op) => {
-    let opts = seprate(op)
-    opts.ele = "div"
+
+  {{{elements}}}
+
+  function build(opts) {
+    let ele = document.createElement(opts.ele)
+    if (opts.atrs) {
+      Object.keys(opts.atrs).forEach(atr => {
+        if (atr === 'css') {
+          ele.setAttribute('style', opts.atrs[atr])
+        } else {
+          ele.setAttribute(atr, opts.atrs[atr])
+        }
+      })
+    }
+    if (opts.children) {
+      opts.children.forEach(child => {
+        if (typeof child === 'string' || child instanceof String) {
+          ele.innerHTML += child
+        } else {
+          ele.appendChild(child)
+        }
+      })
+    }
+    return ele
   }
-  function build(opts) {}
   function seprate(op) {
     let atrs = null
     let children = []
-    if (Array.isArray(op[0]) == false) {
+    if (typeof op[0] === 'object' || op[0] instanceof Object) {
       atrs = op[0]
-    } else if (String.isString(op[0]) == true) {
-      children.push(op[0])
-    } else if (Array.isArray(op[0]) == true) {
-      children = op[0]
-    } else {
-      throw Error("The first option is not a array, json object or a string.")
+      op.shift()
     }
+    op.forEach(child => {
+      if (typeof child === 'string' || child instanceof String) {
+        children.push(child)
+      } else {
+        children.push(child)
+      }
+    })
     return {atrs: atrs, children: children}
   }
   //Object.defineProperty(exports, '__esModule', { value: true });
