@@ -11,7 +11,7 @@
         }
         apply(...html) {
           html.forEach(element => {
-            this.bindElement.innerHTML += element
+            this.bindElement.innerHTML = element
           })
         }
       })(ele)
