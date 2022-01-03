@@ -44,7 +44,8 @@ Simple as importing this in your html:
 # production
 https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js
 ```
-## Usage
+## Docs
+### Usage
 Initiate an application or a block in the DOM
 ```js
 var app = skafold.bind(document.body)
@@ -54,74 +55,56 @@ next lets scafold out a virtual DOM
 //      This is a div
 //            \/
 var theDom = div(
+// Some css styling in a custom attribute
+//             \
+//              |
+// Atributes    |
+// put in a     |
+// json object  |
+//    \/        \/
   {css: `text-align: center`
          font-family: monoscape`
   },
+// h1 element  Some text
+// \          /
+// \/        \/
   h1(txt("Skafold")),
-  p(txt("A best scafolding framework"))
+// p element    Some text also, thats just a string also works
+//  \           /
+// \/          \/
+  p("A best scafolding framework")
 )
 ```
+using now setting the selected elements inside to our new dom
+```js
+app.apply(theDom)
+```
+Now read on avalible elements
 ### List of available elements
+- [list of elements in a js file](https://github.com/imagineeeinc/skafold/blob/main/src/elements.js)
+- [list of elements in a md file](https://github.com/imagineeeinc/skafold/blob/main/list-o-elements.md)
+- [an extra svg plugin](https://github.com/imagineeeinc/skafold/blob/main/src/svgPlugin.js)
+#### css attribute
+A custom css attribute, works like the normal style attribute.
+### `skafold`
+parms:
+- dom element
 
-* [X] div
-* [X] txt
-* [X] text
-* [X] span
-* [X] p
-* [X] h1
-* [X] h2
-* [X] h3
-* [X] h4
-* [X] h5
-* [X] h6
-* [X] a
-* [X] img
-* [X] button
-* [X] input
-* [X] select
-* [X] option
-* [X] textarea
-* [X] ul
-* [X] ol
-* [X] li
-* [X] table
-* [X] thead
-* [X] tbody
-* [X] tr
-* [X] td
-* [X] th
-* [X] form
-* [X] fieldset
-* [X] legend
-* [X] label
-* [X] nav
-* [X] section
-* [X] article
-* [X] aside
-* [X] footer
-* [X] header
-* [X] time
-* [X] main
-* [X] br
-* [X] hr
-* [X] canvas
-* [X] video
-* [X] audio
-* [X] source
-* [X] image (diffrent from img)
-* [X] code
-* [X] pre
-* [X] iframe
-* [X] embed
-* [X] i (talic)
-* [X] b (old)
-* [X] u (nderscore)
-* [X] italic
-* [X] bold
-* [X] underscore
-* [X] css or style
-* [X] script
+creates a new link to a dom element
+#### `skafold.apply`
+parms:
+- the virtual dom
 
-#### custom attributes
+applies the dom to actual dom
 
-- css
+### The elements
+parms:
+- The attributes in a json objects
+- children...
+
+makes a elements with the attributs and children
+### txt
+parms:
+- the text
+
+makes a text string
