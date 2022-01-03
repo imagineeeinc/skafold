@@ -10,8 +10,13 @@
           this.bindElement = ele
         }
         apply(...html) {
+	  let num = 0
           html.forEach(element => {
-            this.bindElement.innerHTML = element
+		if(num == 0) {  
+            		this.bindElement.innerHTML = element
+		} else {
+			this.bindElement.innerHTML += element
+		}
           })
         }
       })(ele)
