@@ -10,8 +10,13 @@
           this.bindElement = ele
         }
         apply(...html) {
+	  let num = 0
           html.forEach(element => {
-            this.bindElement.innerHTML += element
+		if(num == 0) {  
+            		this.bindElement.innerHTML = element
+		} else {
+			this.bindElement.innerHTML += element
+		}
           })
         }
       })(ele)
@@ -217,6 +222,24 @@ exports.hr = (...op) => {
 	return document.createElement("hr").outerHTML
 }
 exports.define = (...op) => {
+	let ele = op.shift()
+	let opts = seprate(op)
+	opts.ele = ele
+	return build(opts).outerHTML
+}
+exports.customEle = (...op) => {
+	let ele = op.shift()
+	let opts = seprate(op)
+	opts.ele = ele
+	return build(opts).outerHTML
+}
+exports.custEle = (...op) => {
+	let ele = op.shift()
+	let opts = seprate(op)
+	opts.ele = ele
+	return build(opts).outerHTML
+}
+exports.newEle = (...op) => {
 	let ele = op.shift()
 	let opts = seprate(op)
 	opts.ele = ele
