@@ -44,6 +44,23 @@ Simple as importing this in your html:
 # production
 https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js
 ```
+## Usage
+Initiate an application or a block in the DOM
+```js
+var app = skafold.bind(document.body)
+```
+next lets scafold out a virtual DOM
+```js
+//      This is a div
+//            \/
+var theDom = div(
+  {css: `text-align: center`
+         font-family: monoscape`
+  },
+  h1(txt("Skafold")),
+  p(txt("A best scafolding framework"))
+)
+```
 ### List of available elements
 
 * [X] div
