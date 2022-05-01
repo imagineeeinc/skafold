@@ -86,7 +86,7 @@ Now read on avalible elements
 - [an extra svg plugin](https://github.com/imagineeeinc/skafold/blob/main/src/svgPlugin.js)
 #### css attribute
 A custom css attribute, works like the normal style attribute.
-### `skafold`
+### `skafold.bind`
 parms:
 - dom element
 
