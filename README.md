@@ -37,16 +37,29 @@ This converts to:
 It's as simple as stacking bricks.
 
 ## Install
+### Browser
 Simple as importing this in your html:
 ```
 # production
 https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js
 ```
+### NPM
+```bash
+npm install skafold-js
+```
 ## Docs
 ### Usage
+Importing
+```js
+// browser
+import {e, skafold} form 'https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js'
+// Node (cjs)
+const {e, skafold} = require('skafold-js')
+// Node (esm)
+import {e, skafold} form 'skafold-js'
+```
 Initiate an application or a block in the DOM
 ```js
-import {e, skafold} form 'https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js'
 var app = skafold.bind(document.body)
 ```
 next lets scafold out a virtual DOM
