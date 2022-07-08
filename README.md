@@ -43,7 +43,7 @@ Simple as importing this in your html:
 # production
 https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js
 ```
-### NPM
+### [NPM](https://www.npmjs.com/package/skafold-js)
 ```bash
 npm install skafold-js
 ```
