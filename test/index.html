@@ -8,33 +8,31 @@
 </head>
 
 <body>
-  <script src="../dist/skafold.js"></script>
-  <script>
+  <script type="module">
+    import {skafold, e} from '../dist/skafold.js'
     var app = skafold.bind(document.body)
     app.apply(
-      div({
+      e('div', {
         id: "app",
         class: "bg-blue",
         js: "yes"
       },
-        h1(
-          txt("Skafold the app")
+        e('h1',
+          "Skafold the app"
         ),
-        p({
+        e('p',{
           css: "text-align: center;"
         },
-          text(
             'Welcome to the '+
-            span({
+            e('span', {
               style: "color: aqua;"
             }, 'Skafold')+
             ' web app.'+
-            br()+
+            e('br')+
             'hope you have fun!'
           )
         )
       )
-    )
   </script>
 </body>
 

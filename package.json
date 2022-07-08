@@ -2,7 +2,13 @@
   "name": "skafold",
   "version": "0.1.0",
   "description": "A small html scaffolding libary, to build beautiful ui in js",
-  "main": "index.js",
+  "main": "dist/skafold.cjs",
+  "exports": {
+    "default": "./dist/skafold.min.cjs",
+    "import": "./dist/skafold.min.js",
+    "node": "./dist/skafold.min.cjs",
+    "require": "./dist/skafold.min.cjs"
+  },
   "scripts": {
     "bundle": "node bundle.js",
     "watch": "nodemon bundle.js -i ./dist"
@@ -28,6 +34,7 @@
   },
   "homepage": "https://github.com/imagineeeinc/skafold#readme",
   "devDependencies": {
-    "esbuild": "^0.14.10"
+    "esbuild": "^0.14.10",
+    "nodemon": "^2.0.19"
   }
 }

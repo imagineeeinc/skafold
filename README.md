@@ -83,7 +83,6 @@ Now read on avalible elements
 ### List of available elements
 - [list of elements in a js file](https://github.com/imagineeeinc/skafold/blob/main/src/elements.js)
 - [list of elements in a md file](https://github.com/imagineeeinc/skafold/blob/main/list-o-elements.md)
-- [an extra svg plugin](https://github.com/imagineeeinc/skafold/blob/main/src/svgPlugin.js)
 #### css attribute
 A custom css attribute, works like the normal style attribute.
 ### `skafold.bind`

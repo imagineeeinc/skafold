@@ -1,2 +1,1 @@
-require("../")
-console.log(div)
+console.log(require("../"))
