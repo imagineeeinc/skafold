@@ -1,6 +1,6 @@
 <h1 align="center">Skafold</h1>
 <h4 align="center">A small html scaffolding library, to build beautiful UI in JavaScript</h4>
-Skafold (speled as the regular Scafold) is meant ot be a unique js libary to build websites by scafolding up using modular bricks. Its quite simple as just calling creating elements in your code to build a nice DOM. There are helper functions inplace to also apply changes to the actual dom.
+Skafold (speled as the regular Scafold) is meant ot be a unique js libary to build websites by scafolding up using modular bricks. Its quite simple as just creating elements in your code to build a nice DOM. There are helper functions inplace to also apply changes to the actual dom.
 
 ## Example
 ```js
@@ -52,11 +52,11 @@ npm install skafold-js
 Importing
 ```js
 // browser
-import {e, skafold} form 'https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js'
+import {e, skafold} from 'https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js'
 // Node (cjs)
 const {e, skafold} = require('skafold-js')
 // Node (esm)
-import {e, skafold} form 'skafold-js'
+import {e, skafold} from 'skafold-js'
 ```
 Initiate an application or a block in the DOM
 ```js

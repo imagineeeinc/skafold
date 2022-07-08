@@ -1,5 +1,5 @@
 ./src
 ./dist/skafold.js
-./dist/skafold,svg.js
+./dist/skafold.cjs
 ./test
 ./bundle.js
