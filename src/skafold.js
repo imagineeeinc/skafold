@@ -62,5 +62,13 @@ export const skafold = {
         })
       }
     })(ele)
+  },
+  makeObject(ele) {
+    let box = document.createElement("div")
+    box.innerHTML = ele
+    return box.firstChild
+  },
+  strigify(ele) {
+    return ele.outerHTML
   }
 }

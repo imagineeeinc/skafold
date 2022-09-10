@@ -1,6 +1,6 @@
 {
   "name": "skafold-js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A small html scaffolding libary, to build beautiful ui in js",
   "main": "dist/skafold.cjs",
   "exports": {

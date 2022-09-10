@@ -1,6 +1,6 @@
 <h1 align="center">Skafold</h1>
 <h4 align="center">A small html scaffolding library, to build beautiful UI in JavaScript</h4>
-Skafold (speled as the regular Scafold) is meant ot be a unique js libary to build websites by scafolding up using modular bricks. Its quite simple as just creating elements in your code to build a nice DOM. There are helper functions inplace to also apply changes to the actual dom.
+Skafold (spelled as the regular Scaffold) is meant to be a unique js library to build websites by scaffolding up using modular bricks. Its quite simple as just creating elements in your code to build a nice DOM. There are helper functions in place to also apply changes to the actual dom.
 
 ## Example
 ```js
@@ -41,7 +41,9 @@ It's as simple as stacking bricks.
 Simple as importing this in your html:
 ```
 # production
-https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js
+https://unpkg.com/skafold-js@latest/dist/skafold.min.js
+# development
+https://unpkg.com/skafold-js@latest/dist/skafold.js
 ```
 ### [NPM](https://www.npmjs.com/package/skafold-js)
 ```bash
@@ -52,7 +54,7 @@ npm install skafold-js
 Importing
 ```js
 // browser
-import {e, skafold} from 'https://cdn.jsdelivr.net/gh/imagineeeinc/skafold/dist/skafold.min.js'
+import {e, skafold} from 'https://unpkg.com/skafold-js@latest/dist/skafold.min.js'
 // Node (cjs)
 const {e, skafold} = require('skafold-js')
 // Node (esm)
@@ -62,7 +64,7 @@ Initiate an application or a block in the DOM
 ```js
 var app = skafold.bind(document.body)
 ```
-next lets scafold out a virtual DOM
+next lets scaffold out a virtual DOM
 ```js
 //   This is a element block
 //            \/
@@ -106,6 +108,20 @@ parms:
 - the virtual dom
 
 applies the dom to actual dom
+
+### `skafold.makeObject`
+parms:
+- a skafold element made with skafold (or any string that will be a DOM object)
+
+turns skafold elements into DOM objects
+
+### `skafold.strigify`
+parms:
+- a DOM object
+
+turns DOM object into strings to be used in skafold
+
+turns skafold elements into DOM objects
 
 ### `e` the element block
 parms:

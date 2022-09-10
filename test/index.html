@@ -11,8 +11,7 @@
   <script type="module">
     import {skafold, e} from '../dist/skafold.js'
     var app = skafold.bind(document.body)
-    app.apply(
-      e('div', {
+    var elements = e('div', {
         id: "app",
         class: "bg-blue",
         js: "yes"
@@ -32,7 +31,12 @@
             'hope you have fun!'
           )
         )
-      )
+    app.apply(
+      elements
+    )
+    var obj = skafold.makeObject(elements)
+    console.log(obj)
+    console.log(skafold.strigify(obj))
   </script>
 </body>
 
